@@ -11,6 +11,11 @@ public class Main {
         System.out.println("Hello world!");
         System.out.println("홍길동");
 
+        System.out.println("20220922");
+        System.out.println("push 깃에 올리는 것");
+        System.out.println("pull 깃에 다운 받는 것");
+
+
 
     }
 }
