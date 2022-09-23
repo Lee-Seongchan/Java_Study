@@ -17,5 +17,59 @@ public class Main {
 
         System.out.println("수정사항");
 
+        System.out.println("----- 20220923 ----");
+
+        // ** 변수 : 값이 언제든지 변경 가능한 수.
+        // ** 상수 : 값의 변경이 불가능한 수.
+
+        // ** lvalue = rvalue
+        //변수를 = lvalue(엘밸류) 상수를 = rvalue(알밸류) 라고 한다.
+
+        // ** 변수 선언
+        int number;
+
+        //** 변수 초기화
+        number = 10;
+
+        // ** 변수 선언 및 초기화
+        int num = 100;
+
+        // ** 출력
+        System.out.println(number);
+        System.out.println(num);
+
+        // ** 값 변경
+        number = 20;
+        num = 200;
+
+        // ** 출력
+        System.out.println(number);
+        System.out.println(num);
+
+        //=======================================================
+        //  [자 료 형]
+        // =====================================================
+
+        /*
+        * 자료형의 종류
+        * [정수형 data type]
+
+        * 문자를 표현할 때 사용
+        * char : 2byte
+
+        * 숫자를 표현할 때 사용
+        * byte : 1byte
+        * short : 2byte
+        * int  : 4byte
+        * long  : 8byte
+
+        * [실수형 data type]
+        * float : 4byte
+        * double  : 8 byte
+
+        * [논리형 data type]
+        * boolean : 1byte
+         */
+
     }
 }
