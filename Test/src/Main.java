@@ -69,7 +69,9 @@ public class Main {
 
         * [논리형 data type]
         * boolean : 1byte
-         */
+        */
+
+
 
     }
 }
