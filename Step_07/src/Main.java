@@ -29,6 +29,8 @@ public class Main {
 
             // ** 반복문 중복 [구구단 출력하기]
 
+            System.out.println(" for 반복문으로 구구단 출력하기 ");
+
             for (int i = 2; i < 10; ++i) {
                 System.out.println("[" + i + "] 단");
                 for (int j = 1; j < 10; ++j) {
@@ -71,6 +73,9 @@ public class Main {
         System.out.println("-------------------------------");
 
             // ** while문도 중복 작성이 가능함.
+
+        System.out.println("while 문 중복 작성");
+        
         {
             int i = 2;
             while (true)
@@ -100,6 +105,8 @@ public class Main {
             *
             * } while(조건식)
              */
+
+            System.out.println("do while문으로 0 ~ 9 반복문 작성하기");
             int i = 0;
             do{
                 System.out.println(i++);
@@ -107,6 +114,8 @@ public class Main {
 
             System.out.println("-----------------------------------------------");
         }
+
+        System.out.println("---- do while문 ----");
 
         // ** do ~ while : 조건이 성립되지 않더라도 무조건 1회는 실행됨
         { int i = 0;
@@ -126,8 +135,27 @@ public class Main {
             }
             
         }
-        // continue 문으로 구구단 만들기 
+        // continue 문으로 구구단 만들기
         // 구구단 짝수단 or 홀수단 만들기
 
+
+        System.out.println("\n");
+
+        System.out.println("----- continue문으로 구구단 짝수단 만들기 -------");
+
+        for (int dan = 2; dan <10; dan++) {
+
+            if (dan % 2 != 0) {
+                continue;
+            }
+            System.out.println(dan + "단");
+            for (int count = 1; count < 10; count++) {
+
+                System.out.println(dan + "X" + count + " = " + dan * count);
+
+            }
+
+            System.out.println();
+        }
     }
 }
