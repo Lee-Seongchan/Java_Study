@@ -99,7 +99,7 @@ public class Main {
 
             }
 
-        // for문을 통해 하나의 값 생성 후 나머지 생성되지 않은 숫자는 0을 생성 반복됨.
+        // for 문을 통해 하나의 값 생성 후 나머지 생성되지 않은 숫자는 0을 생성 반복되며 하나씩 생성됨.
         /*
             for(int i = 0; i < numbers.length; ++i){
             System.out.println(numbers[i]);
