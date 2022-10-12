@@ -25,4 +25,5 @@ public class MegaExample {
     Singleton s3 = Singleton.getInstance();
 
 
+
 }
