@@ -1,0 +1,38 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.5'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	// ** HTML 사용하기 위한 라이브러리를 라이브러리를 추가
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+	// ** 웹 어플리케이션 서버(톰캣(어플리케이션)이 들어있음 -> 톰캣이 있는 서버를 웹 어플리케이션 서버라고 한다.)
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// ** Getter, Setter
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+
+	//
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
