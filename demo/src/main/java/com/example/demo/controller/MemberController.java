@@ -9,16 +9,24 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.Mapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
-@Controller
+
+
+@Controller //컨트롤러나 서비스와 같은 계층을 먼저 나누어 놓는다. -> 계층생성
 public class MemberController {
 
     @Autowired
     private MemberRepository memberRepository;
 
 
-    @GetMapping("new")
+    @GetMapping("new") // Controller에서 new를 입력을 할 것인가 안 할것인가.... //localhost:8080/new에서 new와 동일
     public String newMember()
     {
+        /*
+        Member member = new Member("홍길동");
+        memberRepository.save(member);
+        //save는 레퍼지토리 변경사항이 있으면 db에 저장
+        System.out.println("createMember");
+         */
         return "new";
     }
 
@@ -26,10 +34,13 @@ public class MemberController {
     @PostMapping("create")  //참조뿐만 아니라 변경도 가능
     public String createMember()
     {
-        Member member = new Member("홍길동");
+        Member member = new Member("홍길동",34,"55555@naver.com");
+
+        // ** 나이
+        // ** 이메일
         memberRepository.save(member);
         System.out.println("createMember");
-        return "";
+        return "create";
     }
 
 
