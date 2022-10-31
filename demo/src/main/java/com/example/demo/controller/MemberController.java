@@ -14,8 +14,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller //컨트롤러나 서비스와 같은 계층을 먼저 나누어 놓는다. -> 계층생성
 public class MemberController {
 
+    // view와 관련된 것들...
     @Autowired
-    private MemberRepository memberRepository;
+    private MemberService memberService;
 
 
     @GetMapping("new") // Controller에서 new를 입력을 할 것인가 안 할것인가.... //localhost:8080/new에서 new와 동일
@@ -32,14 +33,13 @@ public class MemberController {
 
     //@GetMapping("create") 참조만 가능
     @PostMapping("create")  //참조뿐만 아니라 변경도 가능
-    public String createMember()
+    public String createMember(Member member)
     {
-        Member member = new Member("홍길동",34,"55555@naver.com");
+        //Member member = new Member("홍길동"); // 임시의 데이터
+        memberService.insertMember(member);
 
-        // ** 나이
-        // ** 이메일
-        memberRepository.save(member);
-        System.out.println("createMember");
+
+        //추가
         return "create";
     }
 

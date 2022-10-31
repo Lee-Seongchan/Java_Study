@@ -16,19 +16,39 @@ public class Member {
     private Long id;
 
     @Column(name = "NAME")
-    private String userName;
+    private String username;
+
+    /*
+
+
     @Column(name = "AGE")
     private Integer age;
     // int와 차이점 null값 대입 가능 사칙연산 불가능
     @Column(name = "EMAIL")
     private String email;
 
-    public Member(String userName,int age, String email)
+     */
+
+    public Member(String username)
     {
-        this.userName =userName;
-        this.age = age;
-        this.email = email;
+        this.username =username;
+       // this.age = age;
+        //this.email = email;
     }
 
 
 }
+
+// ** [영속성]
+
+// ** 영속 : EntitiyManager에 포함된 상태
+// ** 비 영속 :  EntitiyManager에 포함되기 전 상태
+// ** 준 영속 :  EntitiyManager에 포함되었었고 현재는 포함되지 않은 상태
+// ** 삭제 : 삭제된 상태
+
+// 영속성
+// 1 .영속적상태 : 영구적으로 지속적 되는 상태
+// 2. 비영속성상태 : 영구적으로 지속되지 않은 상태
+// 3. 준영속성상태 : 영속 상태였는데 지금은 아님
+// 4. 삭제된 상태
+
