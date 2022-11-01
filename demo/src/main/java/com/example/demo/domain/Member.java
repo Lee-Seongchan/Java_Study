@@ -32,8 +32,8 @@ public class Member {
     public Member(String username)
     {
         this.username =username;
-       // this.age = age;
-        //this.email = email;
+        // this.age = age;
+        // this.email = email;
     }
 
 
