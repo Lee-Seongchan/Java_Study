@@ -120,7 +120,7 @@ public class Main {
         // ** do ~ while : 조건이 성립되지 않더라도 무조건 1회는 실행됨
         { int i = 0;
             do{
-                System.out.println(" do ~ while 홍길동");
+                System.out.println("do ~ while 홍길동");
             } while(false);
 
         // ** 조건이 성립되지 않으면 실행하지 않음
